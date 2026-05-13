@@ -709,7 +709,7 @@
         <!-- Free waitlist form: posts directly to Kit (ConvertKit) form #9436988.
              Kit handles double opt-in confirmation email + Chapter 1 delivery automatically.
              Edit the form/incentive email in Kit: https://app.kit.com/forms/designers/9436988/edit -->
-        <form action="https://app.kit.com/forms/9436988/subscriptions" method="POST" class="space-y-3" data-form-type="waitlist" novalidate>
+        <form action="https://app.kit.com/forms/9436988/subscriptions" method="POST" class="space-y-3" data-form-type="waitlist">
           <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
 
           <input type="text" name="fields[first_name]" placeholder="First name" required class="form-input" />
@@ -747,7 +747,7 @@
           - For now this captures the lead via FormSubmit so no buyer info is ever lost while payment is being wired up.
           TODO: Replace the action URL and JS redirect target with your live checkout link before going live.
         -->
-        <form action="https://formsubmit.co/ajax/meghna@meghnadassani.com" method="POST" class="space-y-3" data-form-type="preorder" novalidate>
+        <form action="https://formsubmit.co/ajax/meghna@meghnadassani.com" method="POST" class="space-y-3" data-form-type="preorder">
           <input type="hidden" name="_subject" value="[So What] New PRE-ORDER reservation" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
@@ -1005,33 +1005,9 @@
 <!-- ============ SCRIPTS ============ -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({ once: true, duration: 800, easing: 'ease-out-cubic', offset: 60 });
-
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Sticky nav + mobile CTA visibility after 400px scroll
-  const stickyNav = document.getElementById('sticky-nav');
-  const mobileCta = document.getElementById('mobile-cta');
-  const progressBar = document.getElementById('scroll-progress');
-
-  function onScroll() {
-    const y = window.scrollY;
-    if (y > 400) {
-      stickyNav.classList.add('visible');
-      mobileCta.classList.add('visible');
-    } else {
-      stickyNav.classList.remove('visible');
-      mobileCta.classList.remove('visible');
-    }
-
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    progressBar.style.width = docHeight > 0 ? (y / docHeight * 100) + '%' : '0%';
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
   // -----------------------------------------
-  // Form submit handler (waitlist + pre-order)
+  // Form submit handler (waitlist + pre-order) — attached FIRST so it works
+  // even if AOS or another external script fails to load.
   // -----------------------------------------
   // The pre-order form currently posts the lead to FormSubmit so the buyer's
   // info is captured even before payment is wired up. When the real checkout
@@ -1086,6 +1062,42 @@
       }
     });
   });
+
+  // -----------------------------------------
+  // Non-critical UI (animations, nav, scroll progress) — wrapped so a single
+  // failure can't break the form handler above.
+  // -----------------------------------------
+  try {
+    if (typeof AOS !== 'undefined') {
+      AOS.init({ once: true, duration: 800, easing: 'ease-out-cubic', offset: 60 });
+    }
+
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    const stickyNav = document.getElementById('sticky-nav');
+    const mobileCta = document.getElementById('mobile-cta');
+    const progressBar = document.getElementById('scroll-progress');
+
+    function onScroll() {
+      const y = window.scrollY;
+      if (y > 400) {
+        stickyNav && stickyNav.classList.add('visible');
+        mobileCta && mobileCta.classList.add('visible');
+      } else {
+        stickyNav && stickyNav.classList.remove('visible');
+        mobileCta && mobileCta.classList.remove('visible');
+      }
+      if (progressBar) {
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        progressBar.style.width = docHeight > 0 ? (y / docHeight * 100) + '%' : '0%';
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  } catch (err) {
+    console.error('Non-critical UI script error:', err);
+  }
 </script>
 
 </body>
