@@ -44,25 +44,28 @@ COVER_LOCK = (
 
 HERO_SCENE = (
     "Photorealistic 3D product render of a premium hardcover book standing "
-    "upright at a 20-degree three-quarter angle, slightly rotated to the "
-    "left so the spine is visible. Visible book thickness ~1 inch with "
-    "subtle warm cream page edges peeking out on the right side. The book "
-    "is rendered as if held up for the viewer — confident, presented. "
+    "upright and facing the viewer ALMOST DIRECTLY HEAD-ON, with a SUBTLE "
+    "rotation of only 6 to 8 degrees to the left. Just enough angle to "
+    "reveal a thin sliver of the spine on the RIGHT side — no more. The "
+    "front cover is mostly square to the camera and FULLY LEGIBLE: the "
+    "words 'So' and 'What' must read clearly without significant "
+    "foreshortening or perspective distortion. The spine sliver shows "
+    "perhaps 5% of the cover width. Book thickness ~1 inch with a thin "
+    "strip of warm cream page edges visible on the right side. "
+    "The book fills most of the frame vertically (top of book near the top "
+    "of the canvas, bottom of book near the bottom of the canvas) — no "
+    "large empty borders. "
     "Editorial warm natural light from the upper-left like soft morning "
-    "window light, casting a soft natural drop shadow grounding the book. "
+    "window light, casting a subtle natural drop shadow grounding the book. "
     "BACKGROUND: a uniform solid pure BLACK (#000000) studio backdrop "
-    "filling the entire canvas behind the book — flat, opaque, photographic "
-    "black like a black-sweep studio shoot. DO NOT add a gradient, texture, "
-    "or any color in the background. DO NOT draw a checkered pattern. The "
-    "background is uniform flat black. The book is centered in the frame "
-    "with generous empty black space around it (especially top and bottom) "
-    "so it floats nicely when later composited onto another color. No "
-    "props, no surface details — just the book on solid black. High-end "
-    "publisher-supplied hero image quality."
+    "filling the entire canvas — flat, opaque, photographic black. DO NOT "
+    "add gradient, texture, color, or a checkered pattern. Just flat black. "
+    "No props, no surface details — just the book on solid black. "
+    "High-end publisher-supplied hero image quality."
 )
 
 PROMPT = COVER_LOCK + HERO_SCENE
-ASPECT = "4:5"  # portrait-ish; works well in the hero's right column
+ASPECT = "3:4"  # tighter portrait — less empty side margin for a near-head-on book
 
 
 def http_post(url, body):
@@ -84,8 +87,13 @@ def download(url, path):
             f.write(r.read())
 
 
-# Same proven alpha-extraction pipeline used on the brand elements.
+# Same proven alpha-extraction pipeline used on the brand elements,
+# plus an auto-crop to the alpha bounding-box so transparent margins
+# don't eat up CSS sizing on the page.
 LOW, HIGH = 35, 70
+ALPHA_CROP_THRESHOLD = 25  # pixels with alpha below this don't count for bbox
+PAD_RATIO = 0.04           # 4% breathing room around the cropped book
+
 def black_to_alpha(in_path, out_path):
     img = Image.open(in_path).convert("RGB")
     arr = np.array(img).astype(np.float32)
@@ -103,6 +111,21 @@ def black_to_alpha(in_path, out_path):
     safe = np.where(alpha > 0, alpha, 1.0)
     straight = np.minimum(arr * 255.0 / safe[..., None], 255.0)
     rgba = np.dstack([straight, alpha]).astype(np.uint8)
+
+    # Auto-crop to the book's bounding box.
+    mask = alpha > ALPHA_CROP_THRESHOLD
+    if mask.any():
+        rows = np.any(mask, axis=1)
+        cols = np.any(mask, axis=0)
+        y0, y1 = np.where(rows)[0][[0, -1]]
+        x0, x1 = np.where(cols)[0][[0, -1]]
+        h, w = rgba.shape[:2]
+        pad = int(min(h, w) * PAD_RATIO)
+        y0, y1 = max(0, y0 - pad), min(h, y1 + 1 + pad)
+        x0, x1 = max(0, x0 - pad), min(w, x1 + 1 + pad)
+        rgba = rgba[y0:y1, x0:x1]
+        print(f"  auto-cropped to {rgba.shape[1]}x{rgba.shape[0]} (from {w}x{h})", flush=True)
+
     Image.fromarray(rgba).save(out_path, "PNG", optimize=True)
 
 
