@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>So What — The new book by Dr. Meghna Dassani | Pre-order today</title>
+<meta name="description" content="Stop overthinking your wins & losses and build unstoppable momentum. Pre-order So What to receive the first chapter instantly and an invitation to Dr. Dassani's private launch webinar." />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctext y='18' font-size='20'%3E%E2%9C%92%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          magenta:     '#B5208E',
+          'magenta-deep': '#8A1469',
+          'magenta-dark': '#3A0729',
+          yellow:      '#FFC72C',
+          'yellow-deep': '#E4A800',
+          cream:       '#FFF8F0',
+          'off-white': '#FCF6EE',
+          ink:         '#241019',
+          muted:       '#6B4A5A',
+        },
+        fontFamily: {
+          serif: ['"Playfair Display"', 'serif'],
+          sans:  ['"DM Sans"', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: #241019;
+    background: #FFF8F0;
+  }
+
+  /* --- Brand textures --- */
+  .bg-magenta-radial {
+    background:
+      radial-gradient(circle at 18% 12%, rgba(255,199,44,0.16) 0%, transparent 38%),
+      radial-gradient(circle at 86% 88%, rgba(255,199,44,0.12) 0%, transparent 42%),
+      linear-gradient(135deg, #B5208E 0%, #8A1469 100%);
+  }
+  .bg-magenta-soft  { background: linear-gradient(180deg, #FFF8F0 0%, #FFE8F5 100%); }
+  .bg-magenta-deep  { background: #3A0729; }
+
+  /* --- Scribble underline (uses the generated yellow squiggle) --- */
+  .scribble-under {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.18em;
+  }
+  .scribble-under::after {
+    content: '';
+    position: absolute;
+    left: -4%;
+    right: -4%;
+    bottom: -0.12em;
+    height: 0.42em;
+    background-image: url('elements/07_scribble_underline.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    pointer-events: none;
+  }
+
+  /* --- Primary CTA: bold yellow with magenta text --- */
+  .cta-primary {
+    background: #FFC72C;
+    color: #3A0729;
+    font-weight: 700;
+    padding: 1rem 1.75rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    box-shadow: 0 10px 28px rgba(255,199,44,0.45), 0 2px 6px rgba(58,7,41,0.18);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    text-decoration: none;
+    line-height: 1.2;
+  }
+  .cta-primary:hover {
+    transform: translateY(-2px) scale(1.02);
+    background: #FFD865;
+    box-shadow: 0 14px 36px rgba(255,199,44,0.55), 0 2px 8px rgba(58,7,41,0.22);
+  }
+
+  /* --- Secondary CTA: white outline (on magenta) --- */
+  .cta-secondary-outline {
+    background: transparent;
+    color: #FFF;
+    border: 2px solid rgba(255,255,255,0.7);
+    font-weight: 600;
+    padding: calc(1rem - 2px) calc(1.75rem - 2px);
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    transition: all 0.18s ease;
+    text-decoration: none;
+    line-height: 1.2;
+  }
+  .cta-secondary-outline:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: #FFF;
+    transform: translateY(-1px);
+  }
+
+  /* --- Magenta CTA for use on light sections --- */
+  .cta-magenta {
+    background: #B5208E;
+    color: #FFF;
+    font-weight: 700;
+    padding: 1rem 1.75rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    box-shadow: 0 10px 28px rgba(181,32,142,0.32);
+    transition: all 0.18s ease;
+    text-decoration: none;
+    line-height: 1.2;
+  }
+  .cta-magenta:hover {
+    background: #8A1469;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 14px 36px rgba(181,32,142,0.42);
+  }
+
+  .cta-ghost-magenta {
+    background: transparent;
+    color: #B5208E;
+    border: 2px solid #B5208E;
+    font-weight: 600;
+    padding: calc(1rem - 2px) calc(1.75rem - 2px);
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    transition: all 0.18s ease;
+    text-decoration: none;
+    line-height: 1.2;
+  }
+  .cta-ghost-magenta:hover {
+    background: #B5208E;
+    color: #FFF;
+    transform: translateY(-1px);
+  }
+
+  /* --- Book cover floating animation --- */
+  @keyframes bookFloat {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50%      { transform: translateY(-14px) rotate(-1deg); }
+  }
+  .book-float {
+    animation: bookFloat 6s ease-in-out infinite;
+    filter: drop-shadow(0 30px 60px rgba(58,7,41,0.55)) drop-shadow(0 12px 18px rgba(0,0,0,0.25));
+  }
+
+  /* --- Scribble arrow swooping behind book --- */
+  .hero-scribble-bg {
+    position: absolute;
+    top: -8%;
+    right: -10%;
+    width: 95%;
+    height: auto;
+    opacity: 0.16;
+    pointer-events: none;
+    transform: rotate(8deg);
+  }
+
+  /* --- Marquee scribble divider strip --- */
+  .scribble-divider-strip {
+    width: 100%;
+    height: 60px;
+    background-image: url('elements/04_scribble_divider.png');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    background-position: center;
+    opacity: 0.85;
+  }
+  .scribble-divider-strip.on-light {
+    filter: invert(20%) sepia(74%) saturate(2832%) hue-rotate(295deg) brightness(86%) contrast(98%);
+    opacity: 0.55;
+  }
+
+  /* --- Step badge wraps generated yellow circle around a numeral --- */
+  .step-badge {
+    position: relative;
+    width: 96px;
+    height: 96px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .step-badge::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('elements/10_scribble_circle_badge.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .step-badge span {
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: #B5208E;
+    line-height: 1;
+    z-index: 1;
+  }
+
+  /* --- Card with magenta accent --- */
+  .offer-card {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 50px rgba(58,7,41,0.10), 0 2px 8px rgba(58,7,41,0.05);
+    border: 1px solid rgba(181,32,142,0.10);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .offer-card.featured {
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFF6E5 100%);
+    border: 2px solid #FFC72C;
+    box-shadow: 0 30px 70px rgba(255,199,44,0.25), 0 4px 14px rgba(58,7,41,0.10);
+    position: relative;
+  }
+  .offer-card:hover {
+    transform: translateY(-4px);
+  }
+  .offer-card.featured .ribbon {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #B5208E;
+    color: #FFF;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    box-shadow: 0 6px 16px rgba(181,32,142,0.35);
+  }
+
+  /* --- Checkmark bullet --- */
+  .check-bullet {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 0.45rem 0;
+  }
+  .check-bullet::before {
+    content: '';
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    margin-top: 0.15rem;
+    background-image: url('elements/06_handdrawn_checkmark.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  /* --- Sticky nav --- */
+  #sticky-nav {
+    position: fixed;
+    top: -80px;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: rgba(255, 248, 240, 0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(181,32,142,0.12);
+    transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  #sticky-nav.visible { top: 0; }
+
+  /* --- Mobile sticky bottom CTA --- */
+  #mobile-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 49;
+    background: #B5208E;
+    padding: 0.85rem 1rem;
+    transform: translateY(110%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 -10px 30px rgba(58,7,41,0.20);
+  }
+  #mobile-cta.visible { transform: translateY(0); }
+  @media (min-width: 768px) { #mobile-cta { display: none !important; } }
+
+  /* --- Quote marks --- */
+  .quote-marks-bg {
+    background-image: url('elements/09_scribble_quote_marks.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  /* --- FAQ accordion --- */
+  .faq-item summary { list-style: none; cursor: pointer; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary .faq-icon { transition: transform 0.25s ease; }
+  .faq-item[open] summary .faq-icon { transform: rotate(45deg); }
+
+  /* --- Headline kerning tweaks (Playfair on a serif headline) --- */
+  .hero-headline { letter-spacing: -0.02em; line-height: 1.02; }
+  .section-headline { letter-spacing: -0.015em; line-height: 1.05; }
+
+  /* --- Scroll progress bar --- */
+  #scroll-progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    background: #FFC72C;
+    z-index: 100;
+    width: 0%;
+    transition: width 0.06s linear;
+  }
+
+  /* --- Hover lift for image frames --- */
+  .frame-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .frame-lift:hover { transform: translateY(-6px); box-shadow: 0 25px 60px rgba(58,7,41,0.18); }
+
+  /* --- Form input styling --- */
+  .form-input {
+    width: 100%;
+    padding: 0.95rem 1.1rem;
+    border-radius: 14px;
+    border: 1.5px solid rgba(181,32,142,0.25);
+    background: #FFFFFF;
+    color: #241019;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    transition: border 0.18s ease, box-shadow 0.18s ease;
+  }
+  .form-input:focus {
+    outline: none;
+    border-color: #B5208E;
+    box-shadow: 0 0 0 4px rgba(181,32,142,0.12);
+  }
+
+  /* --- Subtle text-balance for readability --- */
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+</style>
+</head>
+
+<body class="antialiased">
+
+<div id="scroll-progress"></div>
+
+<!-- ============ STICKY NAV ============ -->
+<nav id="sticky-nav">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <img src="images/logo.png" alt="Dr. Meghna Dassani" class="h-9 w-auto" />
+      <span class="font-serif text-xl text-magenta hidden sm:inline">So What</span>
+    </a>
+    <div class="flex items-center gap-2">
+      <a href="#waitlist" class="text-magenta font-semibold text-sm hidden md:inline-flex items-center gap-1 hover:underline">
+        Just send the chapter →
+      </a>
+      <a href="#preorder" class="cta-magenta text-sm" style="padding: 0.6rem 1.2rem;">Pre-Order</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="top" class="bg-magenta-radial text-white relative overflow-hidden">
+
+  <!-- Top utility bar -->
+  <div class="max-w-7xl mx-auto px-6 pt-6 flex items-center justify-between text-sm relative z-10">
+    <div class="flex items-center gap-3">
+      <img src="images/logo.png" alt="" class="h-9 w-auto" style="filter: brightness(0) invert(1);" />
+      <span class="font-serif text-xl tracking-wide hidden sm:inline">Dr. Meghna Dassani</span>
+    </div>
+    <div class="hidden md:flex items-center gap-6 text-white/85">
+      <a href="#book" class="hover:text-yellow transition">The Book</a>
+      <a href="#sequence" class="hover:text-yellow transition">The Method</a>
+      <a href="#author" class="hover:text-yellow transition">About Dr. Dassani</a>
+      <a href="#preorder" class="hover:text-yellow transition font-semibold">Pre-Order</a>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 py-16 md:py-24 grid lg:grid-cols-12 gap-12 items-center relative z-10">
+
+    <!-- LEFT: Copy -->
+    <div class="lg:col-span-7 relative">
+      <div data-aos="fade-up" class="inline-flex items-center gap-2 bg-white/15 border border-white/25 px-4 py-1.5 rounded-full text-xs tracking-[0.22em] uppercase font-semibold mb-6">
+        <span class="w-2 h-2 rounded-full bg-yellow inline-block"></span>
+        New Book · Pre-Sale Now Open
+      </div>
+
+      <h1 data-aos="fade-up" data-aos-delay="100" class="hero-headline font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-[5.2rem] font-bold mb-6">
+        Stop overthinking.<br />
+        Start
+        <span class="scribble-under text-yellow italic">moving</span>.
+      </h1>
+
+      <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mb-4">
+        From the upcoming book <em class="text-yellow not-italic font-semibold">So What: How to Stop Overthinking Your Wins &amp; Losses and Build Unstoppable Momentum</em> by <strong>Dr. Meghna Dassani</strong>.
+      </p>
+      <p data-aos="fade-up" data-aos-delay="280" class="text-base md:text-lg text-white/80 leading-relaxed max-w-2xl mb-9">
+        The pause after the setback is costing you more than the setback ever did. This book is a 90-second system for high-achievers who are done getting stuck in their own heads.
+      </p>
+
+      <!-- DUAL CTAs -->
+      <div data-aos="fade-up" data-aos-delay="350" class="flex flex-col sm:flex-row gap-4 max-w-xl mb-7">
+        <a href="#preorder" class="cta-primary flex-1">
+          Pre-Order the Book
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="#waitlist" class="cta-secondary-outline flex-1">
+          Just send me Chapter 1
+        </a>
+      </div>
+
+      <p data-aos="fade-up" data-aos-delay="420" class="text-sm text-white/75 max-w-xl">
+        <strong class="text-yellow">Pre-order perks:</strong> Instant Chapter 1 + invitation-only launch webinar with Dr. Dassani. <span class="text-white/60">(Waitlist option = Chapter 1 only)</span>
+      </p>
+
+      <!-- Social proof line -->
+      <div data-aos="fade-up" data-aos-delay="500" class="mt-10 pt-8 border-t border-white/15 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-white/75">
+        <span>As featured on</span>
+        <span class="font-serif text-base">The Making of Her Podcast</span>
+        <span class="text-white/30">·</span>
+        <span class="font-serif text-base">Forbes Business Council</span>
+        <span class="text-white/30">·</span>
+        <span class="font-serif text-base">Author, <em>Airway is Life</em></span>
+      </div>
+    </div>
+
+    <!-- RIGHT: Book cover -->
+    <div class="lg:col-span-5 relative flex justify-center lg:justify-end" data-aos="fade-left" data-aos-delay="200">
+      <img src="elements/01_signature_scribble_arrow.png" alt="" class="hero-scribble-bg" aria-hidden="true" />
+      <div class="relative book-float">
+        <img src="images/book-cover.jpeg" alt="So What — the new book by Dr. Meghna Dassani" class="w-full max-w-sm lg:max-w-md rounded-sm" />
+      </div>
+    </div>
+  </div>
+
+  <!-- bottom edge accent -->
+  <div class="relative h-12 z-10">
+    <div class="absolute inset-x-0 bottom-0 h-8 bg-cream"
+         style="clip-path: polygon(0 100%, 100% 100%, 100% 30%, 90% 60%, 80% 25%, 70% 55%, 60% 20%, 50% 50%, 40% 22%, 30% 58%, 20% 28%, 10% 62%, 0 35%);"></div>
+  </div>
+</header>
+
+
+<!-- ============ THE PROBLEM ============ -->
+<section class="bg-cream py-20 md:py-28" id="problem">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-12 gap-10 items-center">
+
+    <div class="md:col-span-5 flex justify-center" data-aos="fade-right">
+      <div class="relative">
+        <img src="elements/05_overthinking_brain.png" alt="Overthinking trapped in the mind" class="w-full max-w-md"
+             style="filter: invert(13%) sepia(40%) saturate(2814%) hue-rotate(295deg) brightness(83%) contrast(105%);" />
+      </div>
+    </div>
+
+    <div class="md:col-span-7" data-aos="fade-left">
+      <div class="text-magenta font-semibold uppercase tracking-[0.22em] text-xs mb-4">The Real Problem</div>
+      <h2 class="section-headline font-serif text-magenta-dark text-4xl md:text-5xl font-bold mb-6">
+        You're not stuck because you're incapable.
+        You're stuck because you're <span class="text-magenta italic">overthinking</span>.
+      </h2>
+      <p class="text-lg text-muted leading-relaxed mb-5">
+        Smart, capable people get derailed by tiny setbacks and spend <em>days, weeks, months</em> stuck in moments that should have lasted ninety seconds. Then they wonder why momentum keeps slipping.
+      </p>
+      <p class="text-lg text-muted leading-relaxed mb-8">
+        The pause after the setback lasts longer than the setback itself. The pause after the <em>win</em> isn't any kinder. <strong class="text-magenta-dark">Recovery speed is the real skill no one taught you.</strong>
+      </p>
+
+      <ul class="space-y-1 text-ink">
+        <li class="check-bullet"><span><strong>Athletes</strong> who can't shake the last missed point.</span></li>
+        <li class="check-bullet"><span><strong>Entrepreneurs</strong> who overthink decisions until the opportunity walks.</span></li>
+        <li class="check-bullet"><span><strong>Parents</strong> who spiral over every misstep instead of moving on.</span></li>
+        <li class="check-bullet"><span><strong>High performers</strong> who land the win and instantly ask, <em>"was that a fluke?"</em></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- scribble divider strip -->
+<div class="bg-cream py-2"><div class="scribble-divider-strip on-light"></div></div>
+
+<!-- ============ THE PROMISE / 90 SECOND RULE ============ -->
+<section class="bg-magenta-deep text-white py-20 md:py-28 relative overflow-hidden" id="book">
+  <img src="elements/08_momentum_journey_arrow.png" alt="" aria-hidden="true"
+       class="absolute -left-12 top-1/2 -translate-y-1/2 w-[55%] opacity-[0.06] pointer-events-none" />
+
+  <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+    <div class="text-yellow font-semibold uppercase tracking-[0.22em] text-xs mb-5" data-aos="fade-up">The So What Promise</div>
+
+    <h2 class="section-headline font-serif text-4xl md:text-6xl font-bold mb-8" data-aos="fade-up">
+      What if you could recover in
+      <span class="scribble-under text-yellow italic">ninety&nbsp;seconds</span>
+      instead of ninety days?
+    </h2>
+
+    <p class="text-xl text-white/85 leading-relaxed max-w-3xl mx-auto mb-10" data-aos="fade-up">
+      That's not a metaphor. Neuroscience says emotions physiologically dissipate in roughly ninety seconds — <em>if you stop feeding them with thoughts.</em> The rest is the story you keep telling yourself.
+    </p>
+
+    <blockquote class="font-serif italic text-2xl md:text-3xl text-yellow max-w-3xl mx-auto leading-snug" data-aos="fade-up">
+      "The feeling gets ninety seconds. The story gets zero."
+    </blockquote>
+    <p class="mt-3 text-sm tracking-widest uppercase text-white/60" data-aos="fade-up">— From the book</p>
+  </div>
+</section>
+
+<!-- ============ THE SO WHAT SEQUENCE (the methodology) ============ -->
+<section class="bg-cream py-20 md:py-28" id="sequence">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="text-magenta font-semibold uppercase tracking-[0.22em] text-xs mb-4">The Method</div>
+      <h2 class="section-headline font-serif text-magenta-dark text-4xl md:text-5xl font-bold mb-5">
+        The <span class="italic text-magenta">So What</span> Sequence
+      </h2>
+      <p class="text-lg text-muted max-w-2xl mx-auto">
+        Five moves that compress recovery from <em>days</em> to under a minute. Repeatable in any setback, any win, any "what now?" moment.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-x-12 gap-y-8 max-w-4xl mx-auto">
+      <div class="flex items-start gap-6" data-aos="fade-up">
+        <div class="step-badge"><span>1</span></div>
+        <div>
+          <h3 class="font-serif text-2xl font-bold text-magenta-dark mb-2">Identify</h3>
+          <p class="text-muted leading-relaxed">Strip away the story. Name the actual fact, not the narrative spiraling around it. Thirty seconds, max.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-6" data-aos="fade-up" data-aos-delay="80">
+        <div class="step-badge"><span>2</span></div>
+        <div>
+          <h3 class="font-serif text-2xl font-bold text-magenta-dark mb-2">Decide</h3>
+          <p class="text-muted leading-relaxed">One clear action. The most direct path from where you are to the next right move. Not the perfect one — the next one.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-6" data-aos="fade-up">
+        <div class="step-badge"><span>3</span></div>
+        <div>
+          <h3 class="font-serif text-2xl font-bold text-magenta-dark mb-2">Act</h3>
+          <p class="text-muted leading-relaxed">Now. Not tomorrow. Not when you feel ready. You can course-correct while moving, but you can't steer a parked car.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-6" data-aos="fade-up" data-aos-delay="80">
+        <div class="step-badge"><span>4</span></div>
+        <div>
+          <h3 class="font-serif text-2xl font-bold text-magenta-dark mb-2">Adjust</h3>
+          <p class="text-muted leading-relaxed">Treat resistance as data, not a verdict. There's no such thing as failure — only feedback.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-6 md:col-span-2 md:max-w-xl md:mx-auto" data-aos="fade-up">
+        <div class="step-badge"><span>5</span></div>
+        <div>
+          <h3 class="font-serif text-2xl font-bold text-magenta-dark mb-2">Move On</h3>
+          <p class="text-muted leading-relaxed">Acknowledge the result. Extract the lesson. Then say it: <em>so what's next?</em></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-16" data-aos="fade-up">
+      <p class="font-serif italic text-xl text-magenta-dark max-w-2xl mx-auto">
+        "You can't think your way into momentum. You move your way into it."
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ INSIDE THE BOOK ============ -->
+<section class="bg-magenta-soft py-20 md:py-28" id="inside">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="text-magenta font-semibold uppercase tracking-[0.22em] text-xs mb-4">Inside the Book</div>
+      <h2 class="section-headline font-serif text-magenta-dark text-4xl md:text-5xl font-bold mb-4">
+        Five parts. Twenty chapters. One promise.
+      </h2>
+      <p class="text-lg text-muted max-w-2xl mx-auto">
+        A complete blueprint for shrinking the gap between <em>what happens to you</em> and <em>what you do next.</em>
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-5">
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-magenta/10" data-aos="fade-up">
+        <div class="font-serif text-yellow-deep font-bold text-lg mb-1">Part 1</div>
+        <h3 class="font-serif text-xl font-bold text-magenta-dark mb-2">The Problem</h3>
+        <p class="text-sm text-muted leading-relaxed">The pause that kills momentum, the two words that change everything, and the So What Sequence.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-magenta/10" data-aos="fade-up" data-aos-delay="60">
+        <div class="font-serif text-yellow-deep font-bold text-lg mb-1">Part 2</div>
+        <h3 class="font-serif text-xl font-bold text-magenta-dark mb-2">The Traps</h3>
+        <p class="text-sm text-muted leading-relaxed">Success Hangover, Failure Spiral, Opinion Prison, the Perfect Moment Myth.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-magenta/10" data-aos="fade-up" data-aos-delay="120">
+        <div class="font-serif text-yellow-deep font-bold text-lg mb-1">Part 3</div>
+        <h3 class="font-serif text-xl font-bold text-magenta-dark mb-2">The Practice</h3>
+        <p class="text-sm text-muted leading-relaxed">The 90-Second Rule, the Compound Effect, building your So What muscle, living in forward motion.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-magenta/10" data-aos="fade-up" data-aos-delay="180">
+        <div class="font-serif text-yellow-deep font-bold text-lg mb-1">Part 4</div>
+        <h3 class="font-serif text-xl font-bold text-magenta-dark mb-2">Real Life</h3>
+        <p class="text-sm text-muted leading-relaxed">So What in business, relationships, parenting, leadership, health, and personal growth.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-magenta/10" data-aos="fade-up" data-aos-delay="240">
+        <div class="font-serif text-yellow-deep font-bold text-lg mb-1">Part 5</div>
+        <h3 class="font-serif text-xl font-bold text-magenta-dark mb-2">Making It Stick</h3>
+        <p class="text-sm text-muted leading-relaxed">Quick-start guide and the 30-Day So What Challenge.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============ FIRST CHAPTER TEASER ============ -->
+<section class="bg-cream py-20 md:py-28" id="chapter1">
+  <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-12 gap-10 items-center">
+
+    <div class="md:col-span-5 flex justify-center" data-aos="fade-right">
+      <div class="frame-lift relative">
+        <img src="images/book-cover.jpeg" alt="So What book cover" class="w-full max-w-xs rounded-sm shadow-2xl" style="box-shadow: 0 30px 60px rgba(58,7,41,0.25), 0 8px 20px rgba(58,7,41,0.10);" />
+        <img src="elements/03_breakthrough_arrow.png" alt="" aria-hidden="true" class="absolute -top-12 -right-16 w-40 hidden md:block"
+             style="filter: invert(20%) sepia(74%) saturate(2832%) hue-rotate(295deg) brightness(86%) contrast(98%);" />
+      </div>
+    </div>
+
+    <div class="md:col-span-7" data-aos="fade-left">
+      <div class="text-magenta font-semibold uppercase tracking-[0.22em] text-xs mb-4">A Sneak Peek</div>
+      <h2 class="section-headline font-serif text-magenta-dark text-4xl md:text-5xl font-bold mb-6">
+        Chapter 1: <span class="italic">The Pause That Kills Momentum</span>
+      </h2>
+      <p class="text-lg text-muted leading-relaxed mb-5">
+        It opens in a parking lot after a tennis tournament. A teenage girl losing a match she should have won — not from a lack of skill, but from one double-fault she couldn't let go of.
+      </p>
+      <p class="text-lg text-muted leading-relaxed mb-8">
+        That moment cracked Dr. Dassani's whole framework open. Because what played out on that court? It plays out in every boardroom, every operatory, every kitchen table, every inner monologue. <strong class="text-magenta-dark">The point is over. The only question that matters is what's next.</strong>
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 max-w-md">
+        <a href="#waitlist" class="cta-ghost-magenta flex-1">Send me Chapter 1</a>
+        <a href="#preorder" class="cta-magenta flex-1">Pre-order &amp; get it instantly</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ THE OFFERS (waitlist vs pre-order) ============ -->
+<section class="bg-magenta-radial text-white py-20 md:py-28 relative overflow-hidden" id="preorder">
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="text-yellow font-semibold uppercase tracking-[0.22em] text-xs mb-4">Two Ways to Get In</div>
+      <h2 class="section-headline font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-5">
+        Reserve your <span class="italic text-yellow">copy</span>.
+      </h2>
+      <p class="text-lg md:text-xl text-white/85 max-w-2xl mx-auto">
+        Choose how you want to get inside. Both options unlock the first chapter today. Only one unlocks the private launch event.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+      <!-- WAITLIST CARD -->
+      <div class="offer-card text-ink" data-aos="fade-up" id="waitlist">
+        <div class="text-xs tracking-[0.22em] uppercase font-semibold text-magenta mb-3">Free Waitlist</div>
+        <h3 class="font-serif text-3xl md:text-4xl font-bold text-magenta-dark mb-2">Just the chapter.</h3>
+        <p class="text-muted mb-6">Get Chapter 1 in your inbox and a heads-up when the book goes live.</p>
+
+        <ul class="mb-7">
+          <li class="check-bullet"><span>Chapter 1: <em>The Pause That Kills Momentum</em></span></li>
+          <li class="check-bullet"><span>Launch day notification</span></li>
+          <li class="check-bullet"><span>Occasional notes from Dr. Dassani</span></li>
+        </ul>
+
+        <!-- Free waitlist form: posts to FormSubmit.co (matches the existing coaching apply page pattern).
+             To wire to your own ESP later, swap the action URL. -->
+        <form action="https://formsubmit.co/ajax/meghna@meghnadassani.com" method="POST" class="space-y-3" data-form-type="waitlist" novalidate>
+          <input type="hidden" name="_subject" value="[So What] New waitlist signup" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="form_type" value="WAITLIST (free)" />
+          <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+
+          <input type="text" name="first_name" placeholder="First name" required class="form-input" />
+          <input type="email" name="email" placeholder="Email address" required class="form-input" />
+
+          <button type="submit" class="cta-magenta w-full mt-2">
+            Send me Chapter 1 →
+          </button>
+          <p class="form-feedback text-sm text-center mt-2 min-h-[1.25rem]"></p>
+        </form>
+
+        <p class="text-xs text-muted mt-4 text-center">No spam. Unsubscribe anytime.</p>
+      </div>
+
+      <!-- PRE-ORDER CARD -->
+      <div class="offer-card featured text-ink" data-aos="fade-up" data-aos-delay="100">
+        <div class="ribbon">Best Value</div>
+
+        <div class="text-xs tracking-[0.22em] uppercase font-semibold text-magenta mb-3">Pre-Order</div>
+        <h3 class="font-serif text-3xl md:text-4xl font-bold text-magenta-dark mb-2">The full launch.</h3>
+        <p class="text-muted mb-6">Lock in your copy at the pre-sale price, get Chapter 1 instantly, and unlock the private event.</p>
+
+        <ul class="mb-7">
+          <li class="check-bullet"><span><strong>Signed first-print copy</strong> shipped on launch day</span></li>
+          <li class="check-bullet"><span><strong>Chapter 1 delivered instantly</strong> the moment you order</span></li>
+          <li class="check-bullet"><span><strong>Invitation-only launch webinar</strong> with Dr. Dassani (live Q&amp;A + the 30-Day So What Challenge walkthrough)</span></li>
+          <li class="check-bullet"><span><strong>The So What Workbook</strong> — digital companion guide</span></li>
+          <li class="check-bullet"><span>Pre-sale locked-in price</span></li>
+        </ul>
+
+        <!--
+          PRE-ORDER FORM
+          - Collects buyer info as a first step.
+          - On submit, you'll redirect to your real checkout (Stripe Checkout, Shopify, Bookfunnel, etc.).
+          - For now this captures the lead via FormSubmit so no buyer info is ever lost while payment is being wired up.
+          TODO: Replace the action URL and JS redirect target with your live checkout link before going live.
+        -->
+        <form action="https://formsubmit.co/ajax/meghna@meghnadassani.com" method="POST" class="space-y-3" data-form-type="preorder" novalidate>
+          <input type="hidden" name="_subject" value="[So What] New PRE-ORDER reservation" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="form_type" value="PRE-ORDER (paid)" />
+          <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+
+          <div class="grid grid-cols-2 gap-3">
+            <input type="text" name="first_name" placeholder="First name" required class="form-input" />
+            <input type="text" name="last_name"  placeholder="Last name"  required class="form-input" />
+          </div>
+          <input type="email" name="email" placeholder="Email address" required class="form-input" />
+
+          <button type="submit" class="cta-primary w-full mt-2">
+            Reserve My Copy + Webinar Seat
+            <span aria-hidden="true">→</span>
+          </button>
+          <p class="form-feedback text-sm text-center mt-2 min-h-[1.25rem]"></p>
+        </form>
+
+        <p class="text-xs text-muted mt-4 text-center">Secure checkout. Webinar invite delivered within 24 hours of purchase.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ THE EXCLUSIVE WEBINAR ============ -->
+<section class="bg-cream py-20 md:py-28">
+  <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-12 gap-10 items-center">
+
+    <div class="md:col-span-7" data-aos="fade-right">
+      <div class="text-magenta font-semibold uppercase tracking-[0.22em] text-xs mb-4">Pre-Order Bonus</div>
+      <h2 class="section-headline font-serif text-magenta-dark text-4xl md:text-5xl font-bold mb-6">
+        An <span class="italic">invitation-only</span> launch event with Dr. Dassani.
+      </h2>
+      <p class="text-lg text-muted leading-relaxed mb-5">
+        On launch week, pre-order readers join Dr. Dassani for a private, 90-minute live session. No replay link circulating online. No "everyone who's curious." Just the people who bought in early.
+      </p>
+      <ul class="text-ink mb-2">
+        <li class="check-bullet"><span>Live walkthrough of the <strong>30-Day So What Challenge</strong></span></li>
+        <li class="check-bullet"><span>Open <strong>Q&amp;A</strong> — bring the situation you're actually stuck on</span></li>
+        <li class="check-bullet"><span>The <strong>one chapter she cut</strong> from the book, read aloud for attendees only</span></li>
+        <li class="check-bullet"><span>A private replay link with a 7-day window</span></li>
+      </ul>
+    </div>
+
+    <div class="md:col-span-5" data-aos="fade-left">
+      <div class="bg-magenta-deep text-white rounded-3xl p-8 md:p-10 relative overflow-hidden">
+        <img src="elements/02_tangled_scribble_ball.png" alt="" aria-hidden="true"
+             class="absolute -right-10 -bottom-10 w-60 opacity-10" />
+        <div class="relative z-10">
+          <div class="text-yellow uppercase tracking-[0.22em] text-xs font-semibold mb-3">The Private Event</div>
+          <p class="font-serif italic text-2xl md:text-3xl leading-snug mb-6">
+            "Done beats perfect. And in business, there's no such thing as perfect anyway."
+          </p>
+          <a href="#preorder" class="cta-primary">
+            Claim my seat → Pre-order now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ THE PULL QUOTE / TESTIMONIAL ZONE ============ -->
+<section class="bg-magenta-soft py-20 md:py-28 relative overflow-hidden">
+  <div class="max-w-4xl mx-auto px-6 text-center relative">
+
+    <div class="quote-marks-bg absolute inset-x-0 top-0 h-32 opacity-[0.07]"
+         style="filter: invert(13%) sepia(40%) saturate(2814%) hue-rotate(295deg) brightness(83%) contrast(105%);"></div>
+
+    <div class="relative z-10" data-aos="fade-up">
+      <blockquote class="font-serif italic text-3xl md:text-5xl text-magenta-dark leading-tight mb-8">
+        "Reading this won't change your life.<br />
+        <span class="text-magenta">Applying it will.</span>"
+      </blockquote>
+
+      <p class="text-muted text-base tracking-widest uppercase">— Dr. Meghna Dassani</p>
+
+      <div class="mt-12 max-w-2xl mx-auto p-6 md:p-8 bg-white rounded-2xl shadow-md border border-magenta/10 text-left">
+        <p class="text-lg text-ink leading-relaxed mb-4">
+          "I'm a single doctor in my practice. I work three and a half days a week. After working with Dr. Dassani's framework, I hit <strong>$285,000 in production</strong> last month. I told her, <em>'I don't know what happened — I just did what you told me to do.'</em>"
+        </p>
+        <p class="text-sm text-magenta font-semibold tracking-wide">— Private client, Dassani coaching</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ AUTHOR ============ -->
+<section class="bg-cream py-20 md:py-28" id="author">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-12 gap-10 items-center">
+
+    <div class="md:col-span-5 flex justify-center" data-aos="fade-right">
+      <div class="frame-lift">
+        <img src="images/meghna-casual.png" alt="Dr. Meghna Dassani" class="w-full max-w-sm rounded-2xl shadow-xl" />
+      </div>
+    </div>
+
+    <div class="md:col-span-7" data-aos="fade-left">
+      <div class="text-magenta font-semibold uppercase tracking-[0.22em] text-xs mb-4">Meet the Author</div>
+      <h2 class="section-headline font-serif text-magenta-dark text-4xl md:text-5xl font-bold mb-6">
+        Dr. Meghna Dassani
+      </h2>
+      <p class="text-lg text-muted leading-relaxed mb-5">
+        Practicing dentist. Business coach. Speaker. Host of <em>The Making of Her</em> podcast. Mom of two daughters — one of whom unknowingly handed her the entire premise of this book in the front seat of a car after a tennis match.
+      </p>
+      <p class="text-lg text-muted leading-relaxed mb-5">
+        Dr. Dassani built a thriving multi-location practice while watching her highest-performing peers stay frozen by overthinking. The principles she used in the operatory — <em>diagnose quickly, act decisively, adjust as needed</em> — turned out to be the same principles that high-achieving women everywhere were missing.
+      </p>
+      <p class="text-lg text-muted leading-relaxed">
+        She now coaches entrepreneurs, professionals, and leaders on the one skill nobody teaches them: <strong class="text-magenta-dark">how fast you come back.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ FAQ ============ -->
+<section class="bg-magenta-soft py-20 md:py-28">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <div class="text-magenta font-semibold uppercase tracking-[0.22em] text-xs mb-4">Frequently Asked</div>
+      <h2 class="section-headline font-serif text-magenta-dark text-4xl md:text-5xl font-bold">
+        Before you order.
+      </h2>
+    </div>
+
+    <div class="space-y-4">
+
+      <details class="faq-item bg-white rounded-2xl p-6 md:p-7 shadow-sm border border-magenta/10" data-aos="fade-up">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-serif font-bold text-lg md:text-xl text-magenta-dark">When does the book actually ship?</span>
+          <span class="faq-icon text-magenta text-2xl font-light">+</span>
+        </summary>
+        <p class="mt-4 text-muted leading-relaxed">Launch week is on track for October. Every pre-order copy ships the day the book is officially released — and Chapter 1 lands in your inbox the moment you order.</p>
+      </details>
+
+      <details class="faq-item bg-white rounded-2xl p-6 md:p-7 shadow-sm border border-magenta/10" data-aos="fade-up">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-serif font-bold text-lg md:text-xl text-magenta-dark">What's the difference between the waitlist and the pre-order?</span>
+          <span class="faq-icon text-magenta text-2xl font-light">+</span>
+        </summary>
+        <div class="mt-4 text-muted leading-relaxed">
+          <p class="mb-3"><strong>Waitlist (free):</strong> Chapter 1 in your inbox + a heads-up on launch day. That's it.</p>
+          <p><strong>Pre-order:</strong> The signed first-print copy of the book, instant Chapter 1, the digital workbook, the locked-in pre-sale price, and — most importantly — your seat at the invitation-only launch webinar with Dr. Dassani.</p>
+        </div>
+      </details>
+
+      <details class="faq-item bg-white rounded-2xl p-6 md:p-7 shadow-sm border border-magenta/10" data-aos="fade-up">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-serif font-bold text-lg md:text-xl text-magenta-dark">Is the webinar replay going public?</span>
+          <span class="faq-icon text-magenta text-2xl font-light">+</span>
+        </summary>
+        <p class="mt-4 text-muted leading-relaxed">No. A private replay link is shared with pre-order readers only, available for 7 days after the live event. It's not posted publicly, on YouTube, or in the book's marketing channels.</p>
+      </details>
+
+      <details class="faq-item bg-white rounded-2xl p-6 md:p-7 shadow-sm border border-magenta/10" data-aos="fade-up">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-serif font-bold text-lg md:text-xl text-magenta-dark">Is this book for me if I'm not in business?</span>
+          <span class="faq-icon text-magenta text-2xl font-light">+</span>
+        </summary>
+        <p class="mt-4 text-muted leading-relaxed">Yes. Part 4 of the book applies the So What Sequence to relationships, parenting, health, leadership, career, and personal growth. It's a recovery-speed system — not a business book.</p>
+      </details>
+
+      <details class="faq-item bg-white rounded-2xl p-6 md:p-7 shadow-sm border border-magenta/10" data-aos="fade-up">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-serif font-bold text-lg md:text-xl text-magenta-dark">Is this just another "manifest it" book?</span>
+          <span class="faq-icon text-magenta text-2xl font-light">+</span>
+        </summary>
+        <p class="mt-4 text-muted leading-relaxed">No. <em>So What</em> is the opposite of manifestation culture. There are no affirmations, no vision boards, no "sit with your feelings" prompts. It's a practice in moving fast and treating resistance as data. Awareness without action is just information.</p>
+      </details>
+
+      <details class="faq-item bg-white rounded-2xl p-6 md:p-7 shadow-sm border border-magenta/10" data-aos="fade-up">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-serif font-bold text-lg md:text-xl text-magenta-dark">Can I gift a pre-order?</span>
+          <span class="faq-icon text-magenta text-2xl font-light">+</span>
+        </summary>
+        <p class="mt-4 text-muted leading-relaxed">Yes — at checkout, add the gift recipient's shipping address and name. The webinar seat travels with the order, so be sure they're the one who'll be attending live.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ FINAL CTA ============ -->
+<section class="bg-magenta-radial text-white py-24 md:py-32 relative overflow-hidden">
+  <img src="elements/01_signature_scribble_arrow.png" alt="" aria-hidden="true"
+       class="absolute right-[-6%] top-[10%] w-[40%] opacity-10 pointer-events-none" />
+
+  <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+    <h2 class="section-headline font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-6" data-aos="fade-up">
+      The point is over.<br />
+      <span class="scribble-under text-yellow italic">So what's next?</span>
+    </h2>
+
+    <p class="text-lg md:text-xl text-white/85 leading-relaxed max-w-2xl mx-auto mb-10" data-aos="fade-up">
+      Lock in your copy of <em>So What</em> today. Get Chapter 1 in your inbox in the next sixty seconds, and your seat at the private launch event with Dr. Dassani.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-xl mx-auto" data-aos="fade-up">
+      <a href="#preorder" class="cta-primary flex-1">Pre-Order the Book →</a>
+      <a href="#waitlist" class="cta-secondary-outline flex-1">Just the Chapter</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-magenta-dark text-white/70 py-12">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 items-start">
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <img src="images/logo.png" alt="" class="h-9 w-auto" style="filter: brightness(0) invert(1); opacity: 0.85;" />
+        <span class="font-serif text-xl text-white">Dr. Meghna Dassani</span>
+      </div>
+      <p class="text-sm leading-relaxed">Author. Dentist. Coach. Host of <em>The Making of Her</em> podcast.</p>
+    </div>
+
+    <div class="text-sm space-y-2">
+      <div class="text-white font-semibold uppercase tracking-widest text-xs mb-2">The book</div>
+      <a href="#book" class="block hover:text-yellow transition">What the book is about</a>
+      <a href="#sequence" class="block hover:text-yellow transition">The So What Sequence</a>
+      <a href="#chapter1" class="block hover:text-yellow transition">Chapter 1 preview</a>
+      <a href="#preorder" class="block hover:text-yellow transition">Pre-order</a>
+    </div>
+
+    <div class="text-sm space-y-2">
+      <div class="text-white font-semibold uppercase tracking-widest text-xs mb-2">Connect</div>
+      <a href="https://meghnadassani.com" class="block hover:text-yellow transition" target="_blank" rel="noopener">MeghnaDassani.com →</a>
+      <a href="mailto:meghna@meghnadassani.com" class="block hover:text-yellow transition">meghna@meghnadassani.com</a>
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-6 mt-10 pt-6 border-t border-white/10 text-xs flex flex-col sm:flex-row justify-between gap-2 text-white/50">
+    <div>© <span id="year"></span> Dr. Meghna Dassani. All rights reserved.</div>
+    <div>So What — How to Stop Overthinking Your Wins &amp; Losses and Build Unstoppable Momentum.</div>
+  </div>
+</footer>
+
+
+<!-- ============ MOBILE STICKY CTA ============ -->
+<div id="mobile-cta">
+  <div class="flex gap-2">
+    <a href="#waitlist" class="flex-1 text-center text-white border border-white/40 rounded-full py-2.5 text-sm font-semibold">Chapter 1</a>
+    <a href="#preorder" class="flex-1 text-center bg-yellow text-magenta-dark rounded-full py-2.5 text-sm font-bold">Pre-Order →</a>
+  </div>
+</div>
+
+
+<!-- ============ SCRIPTS ============ -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true, duration: 800, easing: 'ease-out-cubic', offset: 60 });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Sticky nav + mobile CTA visibility after 400px scroll
+  const stickyNav = document.getElementById('sticky-nav');
+  const mobileCta = document.getElementById('mobile-cta');
+  const progressBar = document.getElementById('scroll-progress');
+
+  function onScroll() {
+    const y = window.scrollY;
+    if (y > 400) {
+      stickyNav.classList.add('visible');
+      mobileCta.classList.add('visible');
+    } else {
+      stickyNav.classList.remove('visible');
+      mobileCta.classList.remove('visible');
+    }
+
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = docHeight > 0 ? (y / docHeight * 100) + '%' : '0%';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // -----------------------------------------
+  // Form submit handler (waitlist + pre-order)
+  // -----------------------------------------
+  // The pre-order form currently posts the lead to FormSubmit so the buyer's
+  // info is captured even before payment is wired up. When the real checkout
+  // (Stripe Checkout, Shopify, Bookfunnel, etc.) is ready, replace the redirect
+  // line marked TODO below with the live checkout URL.
+  document.querySelectorAll('form[data-form-type]').forEach((form) => {
+    const feedback = form.querySelector('.form-feedback');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnHtml = submitBtn.innerHTML;
+    const type = form.getAttribute('data-form-type');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      feedback.textContent = '';
+      feedback.style.color = '';
+
+      // honeypot
+      if (form.querySelector('input[name="_honey"]').value) return;
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending…';
+
+      try {
+        const fd = new FormData(form);
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: fd,
+          headers: { 'Accept': 'application/json' },
+        });
+
+        if (!res.ok) throw new Error('Request failed');
+
+        if (type === 'waitlist') {
+          feedback.style.color = '#0E7C45';
+          feedback.textContent = "You're in. Chapter 1 is on its way to your inbox.";
+          form.reset();
+        } else if (type === 'preorder') {
+          feedback.style.color = '#0E7C45';
+          feedback.textContent = 'Reservation confirmed. Redirecting to secure checkout…';
+          // TODO: replace this URL with your live checkout (Stripe / Shopify / Bookfunnel)
+          // e.g. window.location.href = 'https://buy.stripe.com/your-checkout-link';
+          setTimeout(() => {
+            window.location.href = 'mailto:meghna@meghnadassani.com?subject=Pre-order%20%E2%80%94%20payment%20link%20please&body=Hi%20Dr.%20Dassani%2C%20I%20just%20reserved%20a%20pre-order%20copy%20of%20So%20What.%20Please%20send%20me%20the%20checkout%20link.%20Thanks%21';
+          }, 1500);
+        }
+      } catch (err) {
+        feedback.style.color = '#B5208E';
+        feedback.textContent = 'Something went wrong. Please email meghna@meghnadassani.com.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHtml;
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
