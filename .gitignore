@@ -3,3 +3,8 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
+
+# Intermediate generation artifacts
+mockups/_raw/
+mockups/_qa_*
+
