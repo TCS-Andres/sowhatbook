@@ -705,17 +705,14 @@
           <li class="check-bullet"><span>Occasional notes from Dr. Dassani</span></li>
         </ul>
 
-        <!-- Free waitlist form: posts to FormSubmit.co (matches the existing coaching apply page pattern).
-             To wire to your own ESP later, swap the action URL. -->
-        <form action="https://formsubmit.co/ajax/meghna@meghnadassani.com" method="POST" class="space-y-3" data-form-type="waitlist" novalidate>
-          <input type="hidden" name="_subject" value="[So What] New waitlist signup" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="form_type" value="WAITLIST (free)" />
+        <!-- Free waitlist form: posts directly to Kit (ConvertKit) form #9436988.
+             Kit handles double opt-in confirmation email + Chapter 1 delivery automatically.
+             Edit the form/incentive email in Kit: https://app.kit.com/forms/designers/9436988/edit -->
+        <form action="https://app.kit.com/forms/9436988/subscriptions" method="POST" class="space-y-3" data-form-type="waitlist" novalidate>
           <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
 
-          <input type="text" name="first_name" placeholder="First name" required class="form-input" />
-          <input type="email" name="email" placeholder="Email address" required class="form-input" />
+          <input type="text" name="fields[first_name]" placeholder="First name" required class="form-input" />
+          <input type="email" name="email_address" placeholder="Email address" required class="form-input" />
 
           <button type="submit" class="cta-magenta w-full mt-2">
             Send me Chapter 1 →
@@ -1068,7 +1065,7 @@
 
         if (type === 'waitlist') {
           feedback.style.color = '#0E7C45';
-          feedback.textContent = "You're in. Chapter 1 is on its way to your inbox.";
+          feedback.textContent = "Check your inbox — click the confirm link to unlock Chapter 1.";
           form.reset();
         } else if (type === 'preorder') {
           feedback.style.color = '#0E7C45';
